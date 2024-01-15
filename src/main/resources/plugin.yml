@@ -1,0 +1,7 @@
+name: SurvivalPlugin
+version: '${project.version}'
+main: dev.subscripted.survivalplugin.Main
+api-version: '1.20'
+authors: [Subscripted]
+commands:
+  giveaway:
