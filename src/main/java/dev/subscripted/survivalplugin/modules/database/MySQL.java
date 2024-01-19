@@ -63,6 +63,7 @@ public class MySQL {
     public static void createTable() {
         if (isConnected()) {
             con.createStatement().executeUpdate("CREATE TABLE IF NOT EXISTS Claninterface (Clanname VARCHAR(100), Clantag VARCHAR(100), OwnerUUID VARCHAR(100), Members VARCHAR(100))");
+            con.createStatement().executeUpdate("CREATE TABLE IF NOT EXISTS Playerdata (Spielername VARCHAR(100), UUID VARCHAR(100), Geld VARCHAR(100), Rang VARCHAR(100))");
         }
     }
 

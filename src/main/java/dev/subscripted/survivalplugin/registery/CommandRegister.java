@@ -7,6 +7,7 @@ import dev.subscripted.survivalplugin.modules.clans.manager.ClanInviteManager;
 import dev.subscripted.survivalplugin.modules.clans.manager.ClanManager;
 import dev.subscripted.survivalplugin.modules.event.Giveaway;
 import dev.subscripted.survivalplugin.modules.troll.crasher.commands.CrashCommand;
+import dev.subscripted.survivalplugin.modules.troll.trollmenu.commands.PlayerSelectorCommand;
 
 public class CommandRegister {
 
@@ -20,5 +21,6 @@ public class CommandRegister {
         instance.getCommand("clan").setExecutor(new ClanInvite(clanmanager, inviteManager));
         instance.getCommand("clan").setTabCompleter(new ClanInvite(clanmanager, inviteManager));
         instance.getCommand("crash").setExecutor(new CrashCommand());
+        instance.getCommand("troll").setExecutor(new PlayerSelectorCommand());
     }
 }
