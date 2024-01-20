@@ -15,7 +15,7 @@ public class Menus {
     public static void openPlayerGui(Player player) {
 
 
-        Inventory menu = Bukkit.createInventory(player, 53, "%placeholder%");
+        Inventory menu = Bukkit.createInventory(player, 54, "%placeholder%");
         List<UUID> onlinePlayers = Bukkit.getOnlinePlayers().stream()
                 .map(Player::getUniqueId)
                 .toList();

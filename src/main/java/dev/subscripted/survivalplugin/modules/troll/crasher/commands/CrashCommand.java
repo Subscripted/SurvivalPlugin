@@ -13,7 +13,7 @@ public class CrashCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (!sender.hasPermission("core.crash")) {
-            sender.sendMessage(Main.getPlugin_prefix() + "§cInsufficient permissions!");
+            sender.sendMessage("§cInsufficient permissions!");
             return false;
         }
 
@@ -21,7 +21,7 @@ public class CrashCommand implements CommandExecutor {
             Player target = Bukkit.getPlayer(args[0]);
 
             if (target == null) {
-                sender.sendMessage(Main.getPlugin_prefix() + "§cPlayer you specified is offline!");
+                sender.sendMessage("§cPlayer you specified is offline!");
                 return false;
             }
 
@@ -43,13 +43,13 @@ public class CrashCommand implements CommandExecutor {
                 CrashUtils.crashPlayer(sender, target, type);
                 return true;
             } else {
-                sender.sendMessage(Main.getPlugin_prefix() + "§cMethod " + method + " doesn't exist!");
+                sender.sendMessage("§cMethod " + method + " doesn't exist!");
                 return false;
             }
 
 
         } else {
-            sender.sendMessage(Main.getPlugin_prefix() + "§cUsage: §b/crash <player> <explosion/position/all>!");
+            sender.sendMessage("§cUsage: §b/crash <player> <explosion/position/all>!");
         }
 
         return true;

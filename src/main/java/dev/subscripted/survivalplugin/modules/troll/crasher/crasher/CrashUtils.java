@@ -61,11 +61,11 @@ public class CrashUtils {
                     break;
             }
 
-            crasher.sendMessage(Main.getPlugin_prefix() + "§aCrashed §2" + victim.getName() + " §ausing §3" + crashType.name() + " §amethod!");
+            crasher.sendMessage("§aCrashed §2" + victim.getName() + " §ausing §3" + crashType.name() + " §amethod!");
 
         } catch (Exception e) {
 
-            crasher.sendMessage(Main.getPlugin_prefix() + "§cFailed to crash §e" + victim.getName() + " §eusing " + crashType.name() + " §cmethod!");
+            crasher.sendMessage( "§cFailed to crash §e" + victim.getName() + " §eusing " + crashType.name() + " §cmethod!");
 
             System.err.println("[CRASHER] Failed to crash " + victim.getName() + " using " + crashType.name() + "!");
             e.printStackTrace();
