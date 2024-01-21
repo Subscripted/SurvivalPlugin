@@ -1,6 +1,7 @@
 package dev.subscripted.survivalplugin.registery;
 
 import dev.subscripted.survivalplugin.Main;
+import dev.subscripted.survivalplugin.modules.chat.ChatFormat;
 import dev.subscripted.survivalplugin.modules.clans.manager.ItemInteraction;
 import dev.subscripted.survivalplugin.modules.connect.JoinMessage;
 import dev.subscripted.survivalplugin.modules.disconnect.LeaveMessage;
@@ -20,5 +21,6 @@ public class ListenerRegistery {
         Bukkit.getPluginManager().registerEvents(new InventoryClickListener(), instance);
         Bukkit.getPluginManager().registerEvents(new GameClickListener(), instance);
         Bukkit.getPluginManager().registerEvents(new PlayerQuitListener(), instance);
+        Bukkit.getPluginManager().registerEvents(new ChatFormat(), instance);
     }
 }

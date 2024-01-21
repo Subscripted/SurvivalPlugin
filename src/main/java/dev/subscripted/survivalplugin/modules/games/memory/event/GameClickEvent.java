@@ -10,15 +10,15 @@ public class GameClickEvent extends Event {
 
     private static final HandlerList handlers = new HandlerList();
 
-    private Player p;
+    private final Player p;
 
-    private Game game;
+    private final Game game;
 
-    private ItemStack item;
+    private final ItemStack item;
 
-    private int slot;
+    private final int slot;
 
-    private Type type;
+    private final Type type;
 
     public GameClickEvent(Player p, Game game, ItemStack item, int slot, Type type) {
         this.p = p;
